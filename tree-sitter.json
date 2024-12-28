@@ -1,0 +1,36 @@
+{
+  "grammars": [
+    {
+      "name": "server_timing",
+      "camelcase": "ServerTiming",
+      "scope": "source.server_timing",
+      "file-types": [
+        ".server_timing"
+      ],
+      "injection-regex": "^server_timing$"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "A parser for the HTTP Server-Timing Header",
+    "authors": [
+      {
+        "name": "Derek Stride",
+        "email": "derek@stride.host",
+        "url": "https://derek.stride.host/"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/derekstride/tree-sitter-server_timing"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true
+  }
+}
