@@ -1,0 +1,95 @@
+==================================================
+Single Metric name
+==================================================
+
+missedCache
+
+--------------------------------------------------
+
+(header
+  (timing_metric
+    name: (identifier)))
+
+==================================================
+Single Metric name and value
+==================================================
+
+cpu;dur=2.4
+
+--------------------------------------------------
+
+(header
+  (timing_metric
+    name: (identifier)
+    duration: (duration
+      value: (number))))
+
+==================================================
+Single Metric name, description and value
+==================================================
+
+cache;desc="Cache Read";dur=23.2
+
+--------------------------------------------------
+
+(header
+  (timing_metric
+    name: (identifier)
+    description: (description
+      value: (string))
+    duration: (duration
+      value: (number))))
+
+==================================================
+Multiple Metrics with duration values
+==================================================
+
+db;dur=53, app;dur=47.2
+
+--------------------------------------------------
+
+(header
+  (timing_metric
+    name: (identifier)
+    duration: (duration
+      value: (number)))
+  (timing_metric
+    name: (identifier)
+    duration: (duration
+      value: (number))))
+
+==================================================
+Multiple Metrics with duration values and descriptions in opposite orders
+==================================================
+
+db;dur=53;desc='Database Query', app;desc="Application Processing";dur=47.2
+
+--------------------------------------------------
+
+(header
+  (timing_metric
+    name: (identifier)
+    duration: (duration
+      value: (number))
+    description: (description
+      value: (string)))
+  (timing_metric
+    name: (identifier)
+    description: (description
+      value: (string))
+    duration: (duration
+      value: (number))))
+
+==================================================
+Metric with single idetifier for description
+==================================================
+
+db;desc=database
+
+--------------------------------------------------
+
+(header
+  (timing_metric
+    name: (identifier)
+    description: (description
+      value: (identifier))))

@@ -11,7 +11,42 @@ module.exports = grammar({
   name: "server_timing",
 
   rules: {
-    // TODO: add the actual grammar rules
-    source_file: $ => "hello"
+    header: $ => seq(
+      $.timing_metric,
+      repeat(seq(",", $.timing_metric)),
+    ),
+
+    timing_metric: $ => seq(
+      field("name", $.identifier),
+
+      optional(
+        choice(
+          seq(";", field("duration", $.duration)),
+          seq(";", field("description", $.description)),
+          seq(";", field("duration", $.duration), ";", field("description", $.description)),
+          seq(";", field("description", $.description), ";", field("duration", $.duration)),
+        ),
+      ),
+    ),
+
+    duration: $ => seq(
+      "dur=",
+      field("value", $.number),
+    ),
+
+    description: $ => seq(
+      "desc=",
+      field(
+        "value",
+        choice(
+          $.identifier,
+          $.string,
+        ),
+      ),
+    ),
+
+    identifier: _ => /[a-zA-Z]+/,
+    number: _ => /[0-9]+(\.[0-9]+)?/,
+    string: _ => choice(/"[^"]*"/, /'[^']*'/),
   }
 });
