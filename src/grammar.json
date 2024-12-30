@@ -35,7 +35,7 @@
           "name": "name",
           "content": {
             "type": "SYMBOL",
-            "name": "identifier"
+            "name": "token"
           }
         },
         {
@@ -145,10 +145,6 @@
         }
       ]
     },
-    "identifier": {
-      "type": "PATTERN",
-      "value": "[a-zA-Z]+"
-    },
     "duration": {
       "type": "SEQ",
       "members": [
@@ -181,7 +177,7 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "identifier"
+                "name": "token"
               },
               {
                 "type": "SYMBOL",
@@ -191,6 +187,10 @@
           }
         }
       ]
+    },
+    "token": {
+      "type": "PATTERN",
+      "value": "[a-zA-Z]+"
     },
     "number": {
       "type": "PATTERN",

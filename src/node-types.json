@@ -8,11 +8,11 @@
         "required": true,
         "types": [
           {
-            "type": "identifier",
+            "type": "string",
             "named": true
           },
           {
-            "type": "string",
+            "type": "token",
             "named": true
           }
         ]
@@ -85,7 +85,7 @@
         "required": true,
         "types": [
           {
-            "type": "identifier",
+            "type": "token",
             "named": true
           }
         ]
@@ -109,11 +109,11 @@
     "named": false
   },
   {
-    "type": "identifier",
+    "type": "number",
     "named": true
   },
   {
-    "type": "number",
+    "type": "token",
     "named": true
   }
 ]

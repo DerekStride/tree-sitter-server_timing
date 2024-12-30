@@ -8,7 +8,7 @@ missedCache
 
 (header
   (timing_metric
-    name: (identifier)))
+    name: (token)))
 
 ==================================================
 Single Metric name and value
@@ -20,7 +20,7 @@ cpu;dur=2.4
 
 (header
   (timing_metric
-    name: (identifier)
+    name: (token)
     duration: (duration
       value: (number))))
 
@@ -34,7 +34,7 @@ cache;desc="Cache Read";dur=23.2
 
 (header
   (timing_metric
-    name: (identifier)
+    name: (token)
     description: (description
       value: (string))
     duration: (duration
@@ -50,11 +50,11 @@ db;dur=53, app;dur=47.2
 
 (header
   (timing_metric
-    name: (identifier)
+    name: (token)
     duration: (duration
       value: (number)))
   (timing_metric
-    name: (identifier)
+    name: (token)
     duration: (duration
       value: (number))))
 
@@ -68,13 +68,13 @@ db;dur=53;desc='Database Query', app;desc="Application Processing";dur=47.2
 
 (header
   (timing_metric
-    name: (identifier)
+    name: (token)
     duration: (duration
       value: (number))
     description: (description
       value: (string)))
   (timing_metric
-    name: (identifier)
+    name: (token)
     description: (description
       value: (string))
     duration: (duration
@@ -90,6 +90,6 @@ db;desc=database
 
 (header
   (timing_metric
-    name: (identifier)
+    name: (token)
     description: (description
-      value: (identifier))))
+      value: (token))))

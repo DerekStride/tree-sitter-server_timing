@@ -17,7 +17,7 @@ module.exports = grammar({
     ),
 
     timing_metric: $ => seq(
-      field("name", $.identifier),
+      field("name", $.token),
 
       optional(
         choice(
@@ -39,13 +39,13 @@ module.exports = grammar({
       field(
         "value",
         choice(
-          $.identifier,
+          $.token,
           $.string,
         ),
       ),
     ),
 
-    identifier: _ => /[a-zA-Z]+/,
+    token: _ => /[a-zA-Z]+/,
     number: _ => /[0-9]+(\.[0-9]+)?/,
     string: _ => choice(/"[^"]*"/, /'[^']*'/),
   }
