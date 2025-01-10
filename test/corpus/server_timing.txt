@@ -107,3 +107,63 @@ cfL4;desc="?proto=TCP&rtt=7825&min_rtt=6711&rtt_var=2527&sent=4&recv=7&lost=0&re
     name: (token)
     description: (description
       value: (string))))
+
+==================================================
+Shopify example
+==================================================
+
+processing;dur=14;desc="gc:1", db;dur=2, db_async;dur=2.121, asn;desc="13335", edge;desc="YUL", country;desc="CA", theme;desc="124566044728", pageType;desc="index", servedBy;desc="4vxz", requestID;desc="1e5f882e-7001-46af-8651-c98531b70e0c-1736536608", cfRequestDuration;dur=80.999851, shopifolk; desc=employee
+
+--------------------------------------------------
+
+(header
+  (timing_metric
+    name: (token)
+    duration: (duration
+      value: (number))
+    description: (description
+      value: (string)))
+  (timing_metric
+    name: (token)
+    duration: (duration
+      value: (number)))
+  (timing_metric
+    name: (token)
+    duration: (duration
+      value: (number)))
+  (timing_metric
+    name: (token)
+    description: (description
+      value: (string)))
+  (timing_metric
+    name: (token)
+    description: (description
+      value: (string)))
+  (timing_metric
+    name: (token)
+    description: (description
+      value: (string)))
+  (timing_metric
+    name: (token)
+    description: (description
+      value: (string)))
+  (timing_metric
+    name: (token)
+    description: (description
+      value: (string)))
+  (timing_metric
+    name: (token)
+    description: (description
+      value: (string)))
+  (timing_metric
+    name: (token)
+    description: (description
+      value: (string)))
+  (timing_metric
+    name: (token)
+    duration: (duration
+      value: (number)))
+  (timing_metric
+    name: (token)
+    description: (description
+      value: (token))))
