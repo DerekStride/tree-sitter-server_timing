@@ -93,3 +93,17 @@ db;desc=database
     name: (token)
     description: (description
       value: (token))))
+
+==================================================
+Metric with number in identifier
+==================================================
+
+cfL4;desc="?proto=TCP&rtt=7825&min_rtt=6711&rtt_var=2527&sent=4&recv=7&lost=0&retrans=0&sent_bytes=2793&recv_bytes=765&delivery_rate=368919&cwnd=237&unsent_bytes=0&cid=c37c1774a285e089&ts=36&x=0"
+
+--------------------------------------------------
+
+(header
+  (timing_metric
+    name: (token)
+    description: (description
+      value: (string))))

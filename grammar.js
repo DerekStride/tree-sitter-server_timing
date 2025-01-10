@@ -45,7 +45,7 @@ module.exports = grammar({
       ),
     ),
 
-    token: _ => /[a-zA-Z]+/,
+    token: _ => /[a-zA-Z][a-zA-Z0-9]+/,
     number: _ => /[0-9]+(\.[0-9]+)?/,
     string: _ => choice(/"[^"]*"/, /'[^']*'/),
   }
